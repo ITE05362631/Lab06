@@ -3,7 +3,6 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <time.h>
 
 int main(int atgc, char *argv[])
 {
