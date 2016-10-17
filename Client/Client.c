@@ -4,6 +4,8 @@
 #include<arpa/inet.h> 
 #include<netdb.h>
 
+#define TRUE 1
+
 int main(int argc , char *argv[])
 {
     int socket_desc;
@@ -32,9 +34,9 @@ int main(int argc , char *argv[])
         return 1;
     }
     puts("Connected\n");
-    while (1)
+    while (TRUE)
     {
-        printf("Input : ");
+        printf("Please Input : ");
         scanf("%s", &message);
         if (send(socket_desc, message, strlen(message), 0) < 0)
         {

@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
+#define TRUE 1
+
 int main(int atgc, char *argv[])
 {
     int socket_desc, new_socket, c;
@@ -35,7 +37,7 @@ int main(int atgc, char *argv[])
         }
         puts("Connection accepted");
 
-        while (1)
+        while (TRUE)
         {   
             if (recv(new_socket, message, 2000, 0) < 0)
             {
